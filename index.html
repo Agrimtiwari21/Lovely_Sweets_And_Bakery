@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovely Sweets Bakery & Confectionery (लवली बेकरी) | Bareilly</title>
+    <meta name="description" content="Lovely Sweets Bakery & Confectionery (लवली बेकरी) - Freshly baked cakes, traditional Indian sweets, and fast food in Bareilly. Delivery available.">
+    <meta name="keywords" content="bakery in Bareilly, best cake shop, Lovely Sweets, sweets in Bareilly, custom cakes, fast food">
+    <link rel="icon" href="Logo.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#0A0A0A',
+                        brown: {
+                            800: '#D1D5DB',
+                            900: '#FFFFFF'
+                        },
+                        pink: {
+                            50: '#171717',
+                            100: '#262626',
+                            200: '#F5A89A',
+                            300: '#F5A89A',
+                            500: '#F5A89A',
+                            600: '#F5A89A',
+                            700: '#E0988A'
+                        },
+                        orange: {
+                            50: '#171717',
+                            200: '#86C5BE'
+                        },
+                        gold: '#F59E0B'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-cream text-brown-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 glass-nav shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 transition-all duration-300" id="nav-container">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-3">
+                        <img src="Logo.png" alt="Lovely Sweets Logo" class="h-12 md:h-14 w-auto object-contain mix-blend-screen">
+                        <div class="hidden sm:block">
+                            <span class="font-serif text-xl font-bold text-[#F5A89A] leading-none block">Lovely Sweets</span>
+                            <span class="text-xs text-gray-400 font-sans">Bakery & Confectionery</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-brown-800 hover:text-pink-600 font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-brown-800 hover:text-pink-600 font-medium transition-colors">About Us</a>
+                    <a href="#menu" class="text-brown-800 hover:text-pink-600 font-medium transition-colors">Menu</a>
+                    <a href="#reviews" class="text-brown-800 hover:text-pink-600 font-medium transition-colors">Reviews</a>
+                    <a href="#contact" class="text-brown-800 hover:text-pink-600 font-medium transition-colors">Contact</a>
+                    <a href="tel:08755476867" class="btn-premium px-6 py-2.5 rounded-full font-medium shadow-md shadow-pink-200"><i class="fas fa-phone-alt mr-2"></i>Order Now</a>
+                </div>
+                <!-- Mobile button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brown-800 hover:text-pink-600 focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#171717] shadow-lg border-t border-zinc-800/50 absolute w-full left-0 z-40">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-3 text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-600 rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-600 rounded-md">About Us</a>
+                <a href="#menu" class="block px-3 py-3 text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-600 rounded-md">Menu</a>
+                <a href="#reviews" class="block px-3 py-3 text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-600 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-20 pb-12 md:pt-32 md:pb-32 flex items-center min-h-[85vh] overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/hero_bakery.png" alt="Lovely Sweets Bakery Display" class="w-full h-full object-cover opacity-20" onerror="this.src='https://images.unsplash.com/photo-1555507036-ab1f40ce88cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'">
+            <div class="absolute inset-0 bg-gradient-to-br from-cream/95 via-cream/80 to-transparent"></div>
+        </div>
+        
+        <!-- Animated Blobs Behind Text -->
+        <div class="absolute top-0 -left-10 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob z-0 hidden md:block"></div>
+        <div class="absolute top-0 -right-10 w-96 h-96 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000 z-0 hidden md:block"></div>
+        <div class="absolute -bottom-20 left-40 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-4000 z-0 hidden md:block"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full animate-fade-in-up mt-8 md:mt-0">
+            <div class="max-w-2xl">
+                <div class="inline-block px-3 py-1.5 md:px-4 rounded-full bg-pink-100 text-pink-600 font-semibold text-xs sm:text-sm mb-4 md:mb-6 tracking-wide border border-pink-200">
+                    <i class="fas fa-star text-gold mr-1"></i> 4.3 Rated in Bareilly
+                </div>
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-brown-900 leading-tight mb-4 md:mb-6">
+                    Freshly Baked <span class="text-gradient relative inline-block">Happiness,<span class="absolute -bottom-1 md:-bottom-2 left-0 w-full h-2 md:h-3 bg-pink-200/50 -z-10 transform -rotate-2"></span></span> Every Day 🍰
+                </h1>
+                <p class="text-base md:text-xl text-brown-800/90 mb-6 md:mb-8 font-light max-w-xl">
+                    Delicious cakes, authentic traditional sweets & fast food in Bareilly. Made with love and high-quality milk since day one.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
+                    <a href="tel:08755476867" class="w-full sm:w-auto btn-premium text-center px-8 py-3.5 md:py-4 rounded-full font-semibold text-base md:text-lg">
+                        Order Now
+                    </a>
+                    <a href="#menu" class="w-full sm:w-auto glass hover-lift text-brown-800 text-center px-8 py-3.5 md:py-4 rounded-full font-semibold text-base md:text-lg">
+                        View Menu
+                    </a>
+                </div>
+                
+                <div class="mt-8 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 text-sm font-medium text-brown-800">
+                    <div class="flex -space-x-2 md:-space-x-3">
+                        <img class="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white object-cover" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer">
+                        <img class="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white object-cover" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer">
+                        <img class="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white object-cover" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white bg-pink-50 text-pink-600 flex items-center justify-center text-xs font-bold">+500</div>
+                    </div>
+                    <div>
+                        <div class="flex text-gold text-xs sm:text-sm mb-0.5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="text-gray-600 text-xs sm:text-sm">539 Happy Reviews</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-8 md:py-12 bg-[#0A0A0A] relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 md:-mt-20 relative">
+            <div class="glass-card rounded-2xl p-6 md:p-8">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 text-center text-sm md:text-base relative z-10">
+                    <div class="flex flex-col items-center justify-center reveal">
+                        <div class="w-16 h-16 bg-pink-50 rounded-full flex items-center justify-center text-pink-600 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="font-semibold text-brown-900">Fresh Ingredients</h3>
+                    </div>
+                    <div class="flex flex-col items-center justify-center reveal delay-100">
+                        <div class="w-16 h-16 bg-pink-50 rounded-full flex items-center justify-center text-pink-600 text-2xl mb-4">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <h3 class="font-semibold text-brown-900">Affordable Prices</h3>
+                    </div>
+                    <div class="flex flex-col items-center justify-center reveal delay-200">
+                        <div class="w-16 h-16 bg-pink-50 rounded-full flex items-center justify-center text-pink-600 text-2xl mb-4">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3 class="font-semibold text-brown-900">Wide Variety</h3>
+                    </div>
+                    <div class="flex flex-col items-center justify-center reveal delay-300">
+                        <div class="w-16 h-16 bg-pink-50 rounded-full flex items-center justify-center text-pink-600 text-2xl mb-4">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="font-semibold text-brown-900">Quick Service</h3>
+                    </div>
+                    <div class="flex flex-col items-center justify-center reveal delay-400">
+                        <div class="w-16 h-16 bg-pink-50 rounded-full flex items-center justify-center text-pink-600 text-2xl mb-4">
+                            <i class="fas fa-motorcycle"></i>
+                        </div>
+                        <h3 class="font-semibold text-brown-900">Delivery Available</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob -z-10 translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-2000 -z-10 -translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="relative reveal order-2 lg:order-1 mt-8 lg:mt-0">
+                    <div class="absolute inset-0 bg-pink-200 rounded-3xl transform -rotate-3 scale-105 opacity-50"></div>
+                    <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bakery Making" class="relative rounded-3xl shadow-xl z-10 w-full h-auto object-cover md:h-[550px]">
+                    
+                    <div class="absolute -top-8 -left-8 glass p-6 rounded-2xl shadow-xl z-20 animate-float hidden md:block">
+                        <div class="flex items-center gap-4">
+                            <div class="text-4xl text-goldenrod">🥛</div>
+                            <div>
+                                <p class="text-xs text-pink-600 uppercase tracking-wider font-bold">100% Pure</p>
+                                <p class="font-bold text-brown-900 text-lg">High-Quality Milk</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute -bottom-8 -right-8 bg-pink-600 p-6 rounded-2xl shadow-xl z-20 animate-float text-white text-center hidden md:block" style="animation-delay: 2s;">
+                        <p class="text-3xl font-serif font-bold mb-1">10+</p>
+                        <p class="text-sm font-medium opacity-90">Years of Trust</p>
+                    </div>
+                </div>
+                
+                <div class="reveal delay-200 order-1 lg:order-2">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-100 text-pink-600 font-semibold text-sm mb-4">
+                        <span class="w-2 h-2 rounded-full bg-pink-600"></span> Our Story
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-brown-900 mt-2 mb-4 md:mb-6 leading-tight">A Trusted Local Shop For Years</h2>
+                    <p class="text-base md:text-lg text-brown-800 mb-5 md:mb-6 font-light leading-relaxed">
+                        Welcome to Lovely Sweets Bakery & Confectionery (लवली बेकरी). We take pride in being a trusted local favorite in Bareilly, 
+                        known for our premium quality sweets, freshly baked cakes, and delicious dairy products.
+                    </p>
+                    <p class="text-lg text-brown-800 mb-8 font-light leading-relaxed">
+                        Whether you need a custom birthday cake, a quick fast-food snack, or traditional Indian sweets made with authentic, high-quality milk, 
+                        we offer a wide variety to satisfy every craving while maintaining affordable pricing for our community.
+                    </p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-4 mb-10">
+                        <div class="glass-card hover-lift p-4 rounded-xl flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-pink-50 border border-zinc-800 flex items-center justify-center text-pink-600 flex-shrink-0">
+                                <i class="fas fa-birthday-cake"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brown-900 mt-1">Custom Cakes</h4>
+                                <p class="text-xs sm:text-sm text-gray-400 mt-1">Birthdays & Anniversaries</p>
+                            </div>
+                        </div>
+                        <div class="glass-card hover-lift p-4 rounded-xl flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-pink-50 border border-zinc-800 flex items-center justify-center text-pink-600 flex-shrink-0">
+                                <i class="fas fa-cookie"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brown-900 mt-1">Traditional Sweets</h4>
+                                <p class="text-xs sm:text-sm text-gray-400 mt-1">Pure Desi Ghee & Milk</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#menu" class="inline-flex items-center justify-center px-8 py-3.5 border-2 border-brown-900 text-brown-900 font-bold rounded-full hover:bg-brown-900 hover:text-[#0A0A0A] transition-all hover-lift group">
+                        Explore Our Menu 
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 md:py-24 bg-[#0A0A0A] relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10 md:mb-16 reveal">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-100 text-pink-600 font-semibold text-sm mb-4">
+                    <span class="w-2 h-2 rounded-full bg-pink-600"></span> Discover
+                </div>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-brown-900 mt-2 mb-4">Our Delicious Menu</h2>
+                <p class="text-brown-800 text-base md:text-lg font-light">From sweet treats to savory bites, everything is prepared fresh daily to bring you joy in every bite.</p>
+            </div>
+
+            <!-- Menu Categories Filter -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12 reveal delay-100">
+                <button class="menu-btn active px-6 py-2.5 rounded-full border border-pink-600 bg-pink-600 text-[#0A0A0A] font-medium hover:shadow-[0_0_15px_rgba(245,168,154,0.4)] transition-all" data-filter="all">All Items</button>
+                <button class="menu-btn px-6 py-2.5 rounded-full border border-zinc-700 bg-zinc-900/50 text-gray-300 hover:border-pink-600 hover:text-pink-600 font-medium transition-all" data-filter="cakes">🎂 Cakes</button>
+                <button class="menu-btn px-6 py-2.5 rounded-full border border-zinc-700 bg-zinc-900/50 text-gray-300 hover:border-pink-600 hover:text-pink-600 font-medium transition-all" data-filter="sweets">🍨 Sweets & Desserts</button>
+                <button class="menu-btn px-6 py-2.5 rounded-full border border-zinc-700 bg-zinc-900/50 text-gray-300 hover:border-pink-600 hover:text-pink-600 font-medium transition-all" data-filter="snacks">🍩 Fast Food</button>
+                <button class="menu-btn px-6 py-2.5 rounded-full border border-zinc-700 bg-zinc-900/50 text-gray-300 hover:border-pink-600 hover:text-pink-600 font-medium transition-all" data-filter="beverages">🥤 Beverages</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" id="menu-grid">
+                <!-- Item 1 -->
+                <div class="menu-item glass-card rounded-3xl overflow-hidden hover-lift group border border-white/60" data-category="cakes">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Birthday Cake" class="w-full h-full object-cover img-zoom">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-4 py-1.5 rounded-full text-sm font-bold text-pink-600 shadow-sm">Popular</div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold text-brown-900 font-serif leading-tight">Premium Birthday Cake</h3>
+                        </div>
+                        <p class="text-brown-800 text-sm mb-6 leading-relaxed">Fresh cream, customizable design, available in multiple flavors (Chocolate, Pineapple, Black Forest).</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl text-pink-600 font-bold font-serif">₹400<span class="text-sm font-sans">+</span></span>
+                            <button onclick="window.location.href='tel:08755476867'" class="w-12 h-12 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-colors group-hover:rotate-12"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-item glass-card rounded-3xl overflow-hidden hover-lift group border border-white/60" data-category="sweets">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605197136124-3860bb6a8e32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Indian Sweets" class="w-full h-full object-cover img-zoom">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold text-brown-900 font-serif leading-tight">Special Mix Sweets Box</h3>
+                        </div>
+                        <p class="text-brown-800 text-sm mb-6 leading-relaxed">Assortment of fresh Barfi, Peda, Milk Cake, and Ladoo made from pure local milk.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl text-pink-600 font-bold font-serif">₹250<span class="text-sm font-sans font-normal text-gray-500">/kg</span></span>
+                            <button onclick="window.location.href='tel:08755476867'" class="w-12 h-12 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-colors group-hover:rotate-12"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-item glass-card rounded-3xl overflow-hidden hover-lift group border border-white/60" data-category="snacks">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pizza Slice" class="w-full h-full object-cover img-zoom">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold text-brown-900 font-serif leading-tight">Cheesy Veg Pizza</h3>
+                        </div>
+                        <p class="text-brown-800 text-sm mb-6 leading-relaxed">Freshly baked pizza base with rich cheese, capsicum, onion, and our special house sauce.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl text-pink-600 font-bold font-serif">₹120</span>
+                            <button onclick="window.location.href='tel:08755476867'" class="w-12 h-12 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-colors group-hover:rotate-12"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-item glass-card rounded-3xl overflow-hidden hover-lift group border border-white/60" data-category="cakes">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pastries" class="w-full h-full object-cover img-zoom">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold text-brown-900 font-serif leading-tight">Assorted Pastries</h3>
+                        </div>
+                        <p class="text-brown-800 text-sm mb-6 leading-relaxed">Soft, creamy, and delightful pastry slices in Red Velvet, Chocolate Truffle, and Butterscotch.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl text-pink-600 font-bold font-serif">₹45<span class="text-sm font-sans font-normal text-gray-500">/pc</span></span>
+                            <button onclick="window.location.href='tel:08755476867'" class="w-12 h-12 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-colors group-hover:rotate-12"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-item glass-card rounded-3xl overflow-hidden hover-lift group border border-white/60" data-category="snacks">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1599599810069-8ed11568e590?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hotdog" class="w-full h-full object-cover img-zoom">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold text-brown-900 font-serif leading-tight">Classic Veg Hotdog</h3>
+                        </div>
+                        <p class="text-brown-800 text-sm mb-6 leading-relaxed">Soft bakery-fresh bun filled with spicy veg patty, mayonnaise, and tangy sauces.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl text-pink-600 font-bold font-serif">₹60</span>
+                            <button onclick="window.location.href='tel:08755476867'" class="w-12 h-12 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-colors group-hover:rotate-12"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-item glass-card rounded-3xl overflow-hidden hover-lift group border border-white/60" data-category="sweets">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c8a9e9ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ice Cream" class="w-full h-full object-cover img-zoom">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold text-brown-900 font-serif leading-tight">Premium Ice Creams</h3>
+                        </div>
+                        <p class="text-brown-800 text-sm mb-6 leading-relaxed">Beat the heat with our wide selection of creamy ice creams, cones, and family packs.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl text-pink-600 font-bold font-serif">Varies</span>
+                            <button onclick="window.location.href='tel:08755476867'" class="w-12 h-12 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-colors group-hover:rotate-12"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-16 md:py-24 bg-pink-50 relative border-t border-pink-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16 reveal">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-200 text-pink-700 font-semibold text-sm mb-4">
+                    <span class="w-2 h-2 rounded-full bg-pink-600"></span> Testimonials
+                </div>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-brown-900 mt-2 mb-4">What Our Local Customers Say</h2>
+                <div class="flex items-center justify-center gap-2 text-xl sm:text-2xl text-gold mb-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text-brown-800 text-sm md:text-base font-medium">4.3 Rating on Google Maps (539 Reviews)</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="glass-card p-8 rounded-3xl hover-lift reveal delay-100 relative">
+                    <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-pink-50 opacity-50"></i>
+                    <div class="flex items-center gap-4 mb-6 relative z-10">
+                        <div class="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-bold text-2xl">R</div>
+                        <div>
+                            <h4 class="font-bold text-brown-900 text-lg">Rahul Sharma</h4>
+                            <div class="text-gold text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic leading-relaxed relative z-10">"Amazing products and great quality. We ordered a customized birthday cake for my daughter, and it tasted as beautiful as it looked! The detail was perfect."</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass-card p-8 rounded-3xl hover-lift reveal delay-200 relative">
+                    <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-pink-50 opacity-50"></i>
+                    <div class="flex items-center gap-4 mb-6 relative z-10">
+                        <div class="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-bold text-2xl">S</div>
+                        <div>
+                            <h4 class="font-bold text-brown-900 text-lg">Sneha Gupta</h4>
+                            <div class="text-gold text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic leading-relaxed relative z-10">"Very tasty sweets and cakes. Their rasgullas are incredibly soft, and you can truly tell they use high-quality milk. Highly recommended in all of Bareilly!"</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass-card p-8 rounded-3xl hover-lift reveal delay-300 relative">
+                    <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-pink-50 opacity-50"></i>
+                    <div class="flex items-center gap-4 mb-6 relative z-10">
+                        <div class="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-bold text-2xl">A</div>
+                        <div>
+                            <h4 class="font-bold text-brown-900 text-lg">Amit Patel</h4>
+                            <div class="text-gold text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic leading-relaxed relative z-10">"Nice ambiance with reasonable prices. The perfect spot for evening snacks like pizza and hotdogs. Quick delivery too which is a huge plus."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Times Section -->
+    <section class="py-12 md:py-16 bg-[#0A0A0A] border-y border-pink-100 relative overflow-hidden">
+        <div class="absolute inset-0 bg-pink-100/10"></div>
+        <div class="absolute -left-20 top-0 w-64 h-64 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center reveal relative z-10">
+            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-brown-900 mb-4 md:mb-6 flex items-center justify-center">
+                <i class="far fa-clock text-pink-500 mr-2 md:mr-3 text-xl md:text-2xl"></i> Popular Times
+            </h3>
+            <div class="glass-card p-5 md:p-8 rounded-3xl max-w-2xl mx-auto">
+                <p class="text-xs sm:text-sm text-gray-500 mb-6 font-medium">Plan your visit to avoid the rush! Evenings are usually our busiest time.</p>
+                <!-- Simple bar chart visualization -->
+                <div class="flex items-end justify-between h-32 md:h-40 gap-1 sm:gap-2 md:gap-4 pt-4 border-b-2 border-gray-100 pb-2">
+                    <div class="w-full bg-pink-100 rounded-t-lg relative group h-[20%] hover:bg-pink-200 transition-colors"><span class="absolute -top-7 md:-top-8 left-1/2 -translate-x-1/2 text-[9px] md:text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity bg-brown-900 text-white px-1.5 md:px-2 py-0.5 md:py-1 rounded whitespace-nowrap">10 AM</span></div>
+                    <div class="w-full bg-pink-100 rounded-t-lg relative group h-[30%] hover:bg-pink-300 transition-colors"><span class="absolute -top-7 md:-top-8 left-1/2 -translate-x-1/2 text-[9px] md:text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity bg-brown-900 text-white px-1.5 md:px-2 py-0.5 md:py-1 rounded whitespace-nowrap">12 PM</span></div>
+                    <div class="w-full bg-pink-200 rounded-t-lg relative group h-[50%] hover:bg-pink-300 transition-colors"><span class="absolute -top-7 md:-top-8 left-1/2 -translate-x-1/2 text-[9px] md:text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity bg-brown-900 text-white px-1.5 md:px-2 py-0.5 md:py-1 rounded whitespace-nowrap">2 PM</span></div>
+                    <div class="w-full bg-pink-300 rounded-t-lg relative group h-[60%] hover:bg-pink-400 transition-colors"><span class="absolute -top-7 md:-top-8 left-1/2 -translate-x-1/2 text-[9px] md:text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity bg-brown-900 text-white px-1.5 md:px-2 py-0.5 md:py-1 rounded whitespace-nowrap">4 PM</span></div>
+                    <div class="w-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZWI0ODk5Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')] rounded-t-lg relative group h-[95%] border border-pink-500 shadow-md"><span class="absolute -top-8 md:-top-10 left-1/2 -translate-x-1/2 text-[9px] md:text-xs font-bold bg-pink-600 text-white px-1.5 md:px-2 py-0.5 md:py-1 rounded z-10 whitespace-nowrap shadow-md">6 PM</span></div>
+                    <div class="w-full bg-pink-500 rounded-t-lg relative group h-[75%] hover:bg-pink-600 transition-colors"><span class="absolute -top-7 md:-top-8 left-1/2 -translate-x-1/2 text-[9px] md:text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity bg-brown-900 text-white px-1.5 md:px-2 py-0.5 md:py-1 rounded whitespace-nowrap">8 PM</span></div>
+                    <div class="w-full bg-pink-100 rounded-t-lg relative group h-[25%] hover:bg-pink-200 transition-colors"><span class="absolute -top-7 md:-top-8 left-1/2 -translate-x-1/2 text-[9px] md:text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity bg-brown-900 text-white px-1.5 md:px-2 py-0.5 md:py-1 rounded whitespace-nowrap">10 PM</span></div>
+                </div>
+                <div class="flex justify-between mt-3 text-xs text-gray-400 font-medium px-2">
+                    <span>Morning</span><span>Afternoon</span><span>Evening</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-[#0A0A0A] relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-pink-50 rounded-full blur-3xl opacity-50 -z-10 translate-x-1/2 -translate-y-1/2"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+                <div class="reveal">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-100 text-pink-600 font-semibold text-sm mb-4">
+                        <span class="w-2 h-2 rounded-full bg-pink-600"></span> Visit Us
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-brown-900 mt-2 mb-6 md:mb-8 leading-tight">We'd Love To See You!</h2>
+                    
+                    <div class="space-y-6 md:space-y-8 mt-6 md:mt-8 glass-card hover-lift p-6 md:p-8 rounded-3xl shadow-sm relative overflow-hidden">
+                        <div class="absolute top-0 right-0 text-[150px] text-pink-50 opacity-50 -mt-10 -mr-10"><i class="fas fa-map-marker-alt"></i></div>
+                        
+                        <div class="flex items-start relative z-10">
+                            <div class="w-14 h-14 bg-white shadow-sm rounded-full flex items-center justify-center text-pink-600 text-xl flex-shrink-0 mt-1 border border-pink-100">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="font-bold text-brown-900 text-xl mb-1">Address</h4>
+                                <p class="text-brown-800 leading-relaxed">Katra Chand Khan Gate, near Sindhu Nagar,<br>Sindhu Nagar, Bareilly,<br>Uttar Pradesh 243005</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start relative z-10">
+                            <div class="w-14 h-14 bg-white shadow-sm rounded-full flex items-center justify-center text-pink-600 text-xl flex-shrink-0 mt-1 border border-pink-100">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="font-bold text-brown-900 text-xl mb-1">Opening Hours</h4>
+                                <p class="text-brown-800 leading-relaxed">Open Daily<br><span class="font-bold text-pink-600 bg-pink-100 px-2 py-0.5 rounded text-sm inline-block mt-1">Closes at 10:00 PM</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start relative z-10">
+                            <div class="w-14 h-14 bg-white shadow-sm rounded-full flex items-center justify-center text-pink-600 text-xl flex-shrink-0 mt-1 border border-pink-100">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="font-bold text-brown-900 text-xl mb-1">Contact Us</h4>
+                                <a href="tel:08755476867" class="text-brown-800 hover:text-pink-600 transition-colors block text-2xl font-bold font-serif mb-1">087554 76867</a>
+                                <p class="text-sm text-gray-500 font-medium"><i class="fas fa-check-circle text-green-500 mr-1"></i> Pick-up and Delivery available</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://maps.app.goo.gl/FvnKbshjQvBVRjd78" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 btn-premium rounded-2xl font-bold text-lg shadow-md hover:shadow-xl group">
+                        <i class="fas fa-directions text-2xl mr-3 group-hover:scale-110 transition-transform"></i>
+                        Get Directions to Shop
+                    </a>
+                </div>
+                
+                <div class="reveal delay-200 h-[300px] sm:h-[400px] md:h-[500px] lg:h-auto rounded-3xl overflow-hidden shadow-2xl shadow-pink-900/10 border-4 border-white">
+                    <!-- Google Maps Embed -->
+                    <iframe src="https://maps.google.com/maps?q=Lovely%20Sweets%20Bakery,%20Sindhu%20Nagar,%20Bareilly&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0A0A0A] text-zinc-300 pt-16 md:pt-20 pb-8 border-t-8 border-[#86C5BE] relative overflow-hidden">
+        <div class="absolute top-0 right-0 opacity-5 -mt-16 -mr-16 md:-mt-20 md:-mr-20">
+            <i class="fas fa-certificate text-[200px] md:text-[300px] text-[#86C5BE]"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
+                <div class="lg:col-span-2">
+                    <img src="Logo.png" alt="Lovely Sweets Logo" class="h-24 md:h-28 w-auto object-contain mb-6 mix-blend-screen">
+                    <p class="text-zinc-400 text-base mb-8 leading-relaxed max-w-md">
+                        Spreading happiness with our freshly baked cakes, fast food snacks, and traditional Indian sweets made from the purest ingredients in Bareilly.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#F5A89A] hover:bg-[#F5A89A] hover:text-[#0A0A0A] hover:-translate-y-1 transition-all text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#F5A89A] hover:bg-[#F5A89A] hover:text-[#0A0A0A] hover:-translate-y-1 transition-all text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/9108755476867" class="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#86C5BE] hover:bg-[#86C5BE] hover:text-[#0A0A0A] hover:-translate-y-1 transition-all text-xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-6 font-serif">Quick Links</h4>
+                    <ul class="space-y-3 text-brown-200 font-medium">
+                        <li><a href="#home" class="hover:text-pink-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-pink-600"></i> Home</a></li>
+                        <li><a href="#about" class="hover:text-pink-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-pink-600"></i> About Us</a></li>
+                        <li><a href="#menu" class="hover:text-pink-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-pink-600"></i> Menu</a></li>
+                        <li><a href="#reviews" class="hover:text-pink-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-pink-600"></i> Reviews & Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-6 font-serif">Business Hours</h4>
+                    <ul class="space-y-3 text-brown-200 font-medium">
+                        <li class="flex justify-between border-b border-brown-800 pb-3"><span>Monday - Sunday</span> <span class="text-white">Open Daily</span></li>
+                        <li class="flex justify-between border-b border-brown-800 pb-3 mt-2"><span>Closing Time</span> <span class="text-pink-400 font-bold">10:00 PM</span></li>
+                        <li class="flex justify-between pb-2 mt-2"><span>Delivery Services</span> <span class="text-green-400 font-bold"><i class="fas fa-check mr-1"></i> Active</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-brown-800 pt-8 flex flex-col md:flex-row justify-between items-center text-brown-300 text-sm font-medium">
+                <p>&copy; 2026 Lovely Sweets Bakery & Confectionery. All Rights Reserved.</p>
+                <p class="mt-2 md:mt-0 flex items-center"><i class="fas fa-heart text-pink-600 mx-2"></i> Proudly Serving Bareilly</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/9108755476867" target="_blank" class="fixed bottom-6 right-6 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center text-4xl shadow-2xl hover:bg-[#128C7E] hover:scale-110 transition-all z-40 animate-bounce-slow" title="Order on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
